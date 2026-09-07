@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Furniture Store</title>
+</head>
+<body>
+    <header>
+        <h1>Simple Furniture Store</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Furniture for your home</h2>
+            <p>Welcome to my furniture store. Choose something nice for your room!</p>
+        </section>
+
+        <section id="products">
+            <h2>Our Products</h2>
+
+            <article>
+                <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=500&q=80" alt="Blue sofa" width="200">
+                <h3>Blue Sofa</h3>
+                <p>$500</p>
+                <button onclick="addToCart('Blue Sofa')">Add to cart</button>
+            </article>
+
+            <article>
+                <img src="https://images.unsplash.com/photo-1532372320572-cda25653a26d?auto=format&fit=crop&w=500&q=80" alt="Wooden table" width="200">
+                <h3>Wooden Table</h3>
+                <p>$300</p>
+                <button onclick="addToCart('Wooden Table')">Add to cart</button>
+            </article>
+
+            <article>
+                <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=500&q=80" alt="Wooden chair" width="200">
+                <h3>Wooden Chair</h3>
+                <p>$150</p>
+                <button onclick="addToCart('Wooden Chair')">Add to cart</button>
+            </article>
+
+            <article>
+                <img src="https://images.unsplash.com/photo-1594620302200-9a762244a156?auto=format&fit=crop&w=500&q=80" alt="Wooden bookshelf" width="200">
+                <h3>Bookshelf</h3>
+                <p>$250</p>
+                <button onclick="addToCart('Bookshelf')">Add to cart</button>
+            </article>
+
+            <article>
+                <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=500&q=80" alt="Bed in a bedroom" width="200">
+                <h3>Bedroom Bed</h3>
+                <p>$700</p>
+                <button onclick="addToCart('Bedroom Bed')">Add to cart</button>
+            </article>
+
+            <article>
+                <img src="https://images.unsplash.com/photo-1558997519-83ea9252edf8?auto=format&fit=crop&w=500&q=80" alt="Wooden cabinet" width="200">
+                <h3>Wooden Cabinet</h3>
+                <p>$400</p>
+                <button onclick="addToCart('Wooden Cabinet')">Add to cart</button>
+            </article>
+        </section>
+
+        <p id="cart">Cart: 0 items</p>
+    </main>
+
+    <footer id="contact">
+        <p>Contact us at furniture@example.com</p>
+    </footer>
+
+    <script>
+        let cartItems = 0;
+
+        function addToCart(productName) {
+            cartItems = cartItems + 1;
+            document.getElementById('cart').textContent = 'Cart: ' + cartItems + ' items';
+            alert(productName + ' was added to your cart!');
+        }
+    </script>
+</body>
+</html>
